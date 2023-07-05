@@ -4,7 +4,7 @@ This is a sample Angular app with fully fledged authentication using Firstline.
 
 ## Helpful resources
 
-- [Quick setup](https://docs.firstline.sh/quicksetup/angular) - our guide for quickly adding login, logout and user information to a Angular app using Firstline.
+- [Quick setup](https://docs.firstline.sh/quicksetup/angular) - our guide for quickly adding login, logout and user information to an Angular app using Firstline.
 - [NodeJS sample backend](https://github.com/firstline-idp/firstline-express-posts-api) - the backend counterpart to this sample app.
 - [Firstline docs](https://docs.firstline.sh) - explore our docs site and learn more about Firstline.
 
@@ -45,7 +45,7 @@ Example:
   "API_URL": "http://localhost:8080",
   "API_INTERCEPTOR_ALLOWED_LIST": ["http://localhost:8080/*"],
   "FIRSTLINE_AUDIENCE": "http://localhost:8080",
-  "FIRSTLINE_DOMAIN": "a2hccrzmw8qw9zxpyptp.dev.firstline.sh",
+  "FIRSTLINE_DOMAIN": "a2hccrzmw8qw9zxpyptp.firstline.sh",
   "FIRSTLINE_CLIENT_ID": "L.Bd3miyssPHeXDoOQ3Kjj62qDXnNjfC",
   "PRODUCTION": false
 }
