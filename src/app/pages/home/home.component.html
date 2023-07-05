@@ -1,0 +1,14 @@
+<div class="container" *ngIf="auth.isLoading$ | async; else loaded">
+  <app-loading></app-loading>
+</div>
+
+<ng-template #loaded>
+  <div class="container" *ngIf="auth.user$ | async as user; else homesignin">
+    <h1 class="text-2xl">Welcome {{user.email}}.</h1>
+    <app-home-content></app-home-content>
+  </div>
+  <ng-template #homesignin>
+    <h1>Please sign-in </h1>
+    <button (click)="loginWithRedirect()">Login</button>
+  </ng-template>
+</ng-template>
