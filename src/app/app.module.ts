@@ -11,7 +11,6 @@ import { LogoutComponent } from './pages/logout/logout.component';
 import { SecuredComponent } from './pages/secured/secured.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -26,7 +25,6 @@ import config from '../../config.json';
     LogoutComponent,
     SecuredComponent,
     NavBarComponent,
-    FooterComponent,
     HomeContentComponent,
     LoadingComponent,
     ErrorComponent

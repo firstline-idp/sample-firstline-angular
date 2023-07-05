@@ -1,41 +1,45 @@
-<nav class="w-full fixed top-0 left-0 flex flex-col py-4 z-[9999] bg-slate-100">
-  <ul class="flex items-center px-4">
-    <li class="px-2">
-      <a
-        routerLink="/"
-        class="text-xl font-medium text-blue-500 hover:text-blue-600 active:text-blue-400"
-      >
-        Home
-      </a>
-    </li>
-    <li class="px-2" *ngIf="auth.isAuthenticated$ | async">
-      <a
-        routerLink="secured"
-        class="hover:underline"
-      >
-        Secured Page
-      </a>
-    </li>
-    <div class="grow"></div>
-    <li class="px-2">
-      <button
-        class="px-4 py-2 rounded-md text-sm duration-100 select-none bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-400"
-        style="min-width: unset"
-        id="qsLogoutBtn"
-        (click)="logout()"
-        *ngIf="auth.isAuthenticated$ | async"
-      >
-        Log out
-      </button>
+<div class="h-16">
+  <nav class="px-4 lg:px-8 py-4 flex justify-between items-center fixed z-10 w-full bg-white border-b border-slate-100">
+    <ul class="flex items-center px-4 w-full">
+      <li class="px-2">
+        <a routerLink="/" class="flex items-center gap-3">
+          <img
+            src="/assets/firstline-logo.svg"
+            alt=""
+            class="h-6"
+          />
+          <h1 class="font-medium tracking-wider text-xl">Firstline</h1>
+        </a>
+      </li>
+      <li class="pl-4 pr-2" *ngIf="auth.isAuthenticated$ | async">
+        <a
+          routerLink="secured"
+          class="hover:underline"
+        >
+          Secured Page
+        </a>
+      </li>
+      <li class="grow"></li>
+      <li class="px-2">
+        <button
+          class="sm:whitespace-nowrap inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm duration-100 select-none bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-100"
+          style="min-width: unset"
+          id="qsLogoutBtn"
+          (click)="logout()"
+          *ngIf="auth.isAuthenticated$ | async"
+        >
+          Logout
+        </button>
 
-      <button
-        class="px-4 py-2 rounded-md text-sm duration-100 select-none bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-400"
-        id="qsLoginBtn"
-        (click)="loginWithRedirect()"
-        *ngIf="(auth.isAuthenticated$ | async) === false"
-      >
-        Log in
-      </button>
-    </li>
-  </ul>
-</nav>
+        <button
+          class="sm:whitespace-nowrap inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm duration-100 select-none bg-primary text-white hover:bg-primary-hover active:bg-primary-active"
+          id="qsLoginBtn"
+          (click)="loginWithRedirect()"
+          *ngIf="(auth.isAuthenticated$ | async) === false"
+        >
+          Login
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
